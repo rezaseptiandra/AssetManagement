@@ -1,0 +1,11 @@
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\bin\Debug\netcoreapp2.2\Logger.deps.json
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\bin\Debug\netcoreapp2.2\Logger.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\bin\Debug\netcoreapp2.2\Logger.pdb
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\bin\Debug\netcoreapp2.2\DataAccess.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\bin\Debug\netcoreapp2.2\DataAccess.pdb
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.csprojAssemblyReference.cache
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.AssemblyInfoInputs.cache
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.AssemblyInfo.cs
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.csproj.CopyComplete
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\Logger\obj\Debug\netcoreapp2.2\Logger.pdb

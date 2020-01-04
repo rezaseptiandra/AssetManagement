@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Update Menu";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#mainform").on("submit", function () {
+                var _obj = {
+                    ID: $("#id").val(),
+                    ParentID: $("#parentid").val(),
+                    MenuName: $("#menuname").val(),
+                    Path: $("#path").val()
+                };
+                _obj = JSON.stringify(_obj);
+                $.ajax({
+                    url: "SubmitUpdate",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { obj: _obj },
+                    success: function (data) { },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form id="mainform">
+    MenuID: <input type="text" id="id" /> <br />
+    ParentID: <input type="text" id="parentid" /> <br />
+    Menu Name: <input type="text" id="menuname" /> <br />
+    Path: <input type="text" id="path" /> <br />
+    <input type="submit" value="Submit" class="submit" /><br />
+</form>

@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Update User Information";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){
+            $('#btnajx').click(function () {
+                var _listRole =  [{ RoleID: 'UUL' }, { RoleID: 'LOL' }];
+                _listRole = JSON.stringify(_listRole);
+                var datapar = $('form').serialize()+'&listRole='+_listRole;
+                debugger;
+                $.ajax({
+                    url: "SubmitUpdateUser",
+                    type: 'post',
+                    datatype: 'application/json',
+                    /*data:  $('form').serialize()+'&'+JSON.stringify({ listRole: listRole }),*/
+                    /*data: { listRole: _listRole },*/
+                    data: datapar,
+                    success: function (data) {
+                        debugger;
+                        /*$("#showResults").html(data)*/
+                    },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+            });
+        });
+    </script>
+}
+<p>Update User Information</p>
+<form method="post" action="@Url.Action("SubmitUpdateUser", "Account")">
+    Full Name: <input type="text" name="fullname" /> <br />
+    Email: <input type="email" name="email" /> <br />
+    Username: <input type="text" name="username" @*readonly="readonly"*@ /> <br />
+    Password: <input type="password" name="password" /> <br />
+    Confirm Password: <input type="password" name="password2" /> <br />
+
+    <br />
+
+    <input type="button" value="Submit" id="btnajx" class="btn btn-sm btn-primary btn-block" />
+    <input type="submit" value="Update" class="submit" />
+
+</form>

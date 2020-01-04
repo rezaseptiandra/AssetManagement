@@ -1,0 +1,15 @@
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\BusinessLogic.deps.json
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\BusinessLogic.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\BusinessLogic.pdb
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\DataAccess.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\Logger.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\Logger.pdb
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\DataAccess.pdb
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.AssemblyInfo.cs
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.csproj.CopyComplete
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.dll
+C:\Users\Reza\source\Workspaces\MicroservicesBMI\WebFramework\WebFramework\BusinessLogic\obj\Debug\netcoreapp2.2\BusinessLogic.pdb

@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "ABP";
+}
+@section Scripts
+{
+    <script>
+        var Action = "New";
+        $(document).ready(function () {
+            init();
+            var table = $('#grdABP').DataTable({
+                serverSide: true,
+                paging: true,
+                autoWidth: false,
+                ajax: {
+                    url: "@Url.Action("GetList", "ABP")",
+                    type: 'POST'
+                },
+                columns: [
+                    { "data": "abpid" },
+                    { "data": "deskripsi" },
+                    { "data": "periodeStart" },
+                    { "data": "periodeEnd" }
+                ],
+                columnDefs: [{
+                    targets: [2, 3], render: function (data) {
+                        return moment(data).format('DD-MMM-YYYY');
+                    }
+                }],
+                select: {
+                    style: 'os'
+                },
+                order: [[1, 'asc']]
+            })
+            .on('select', function (e, dt, type, indexes) {
+                rowSelectChange();
+            })
+            .on('deselect', function (e, dt, type, indexes) {
+                rowSelectChange();
+            })
+            .on('draw', function (e, dt, type, indexes) {
+                rowSelectChange();
+            })
+            .columns().every(function () {
+                var that = this;
+                $('input', this.footer()).on('keyup change', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+
+            function init() {
+                $('#grdABP tfoot th').each(function () {
+                    var title = $(this).text();
+                    $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+                });
+                defaultMainControlVisibility(false);
+            };
+
+            function rowSelectChange() {
+                $("#btnHomeDelete").prop('disabled', $('#grdABP').DataTable().rows('.selected').data().length <= 0);
+                $("#btnHomeUpdate").prop('disabled', $('#grdABP').DataTable().rows('.selected').data().length != 1);
+                $("#btnHomeDetail").prop('disabled', $('#grdABP').DataTable().rows('.selected').data().length != 1);
+            }
+
+            function defaultMainControlVisibility (isCallback) {
+                btShow('#divMain');
+                if (isCallback) {
+                    $('#grdABP').DataTable().ajax.reload(null,false);
+                };
+            };
+
+            function afterSuccessNav(action) {
+                btHide("#divMain");
+                if (action == 'Detail' || action == 'Update' ) {                    
+                }
+            }            
+
+            //Button
+            $('#btnHomeDelete').click(function () {
+                confirmationDialog("Delete Confirmation", "Are you sure you want to Delete this selected ABP?", function () {
+                    $.ajax({
+                        url: "/ABP/SubmitDelete",
+                        type: 'post',
+                        datatype: 'application/json',
+                        data:
+                        {
+                            selectedData: JSON.stringify($('#grdABP').DataTable().rows('.selected').data().toArray())
+                        },
+                        success: function (data) {
+                            table.ajax.reload(null, false);
+                            successDialog("Success", "Delete Success");
+                        },
+                        error: function () {
+                            alert('Ajax error!');
+                            errorDialog("Error", "Delete Error");
+                        }
+                    })
+                })
+            });
+            $('#btnHomeDetail').click(function () {
+                _act= "Detail";
+                loadDetail(
+                    _act,
+                    JSON.stringify($('#grdABP').DataTable().rows('.selected').data().toArray()[0]),
+                    function () {
+                        afterSuccessNav(_act);
+                     },
+                    function () {
+                        alert('Error Populating '+_act);
+                    },
+                    defaultMainControlVisibility
+                );
+            });
+
+            $('#btnHomeAdd').click(function () {
+                 _act= "New";
+                 loadDetail(
+                    _act,
+                    null,
+                    function () {
+                        afterSuccessNav(_act);
+                    },
+                    function () {
+                        alert('Error Populating Detail');
+                    },
+                    defaultMainControlVisibility);
+            });
+
+            $('#btnHomeUpdate').click(function () {
+                _act= "Update";
+                loadDetail(
+                    _act,
+                    JSON.stringify($('#grdABP').DataTable().rows('.selected').data().toArray()[0]),
+                    function () {
+                        afterSuccessNav(_act);
+                     },
+                    function () {
+                        alert('Error Populating Detail');
+                    },
+                    defaultMainControlVisibility
+                );
+            });
+        });
+    </script>    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div style="width:100%">
+    @*<button id="btnBack" type="button" class="btn btn-primary btn-secondary pr-lg-4 d-none">Back</button>*@
+
+    <div class="mb-3"></div>
+    @*<div class="table-responsive">*@
+    <div id="divMain" class="mb-3">
+        <button id="btnHomeAdd" type="button" class="btn btn-primary">Add New</button>
+        <button id="btnHomeDetail" type="button" class="btn btn-primary">Detail</button>
+        <button id="btnHomeUpdate" type="button" class="btn btn-primary">Update</button>
+        <button id="btnHomeDelete" type="button" class="btn btn-primary btn-danger" disabled>Delete</button>
+        <table id="grdABP" class="table table-striped table-bordered nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ABPID</th>
+                    <th>Deskripsi</th>
+                    <th>PeriodeStrat</th>
+                    <th>PeriodeEnd</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>ABPID</th>
+                    <th>Deskripsi</th>
+                    <th>PeriodeStart</th>
+                    <th>PeriodeEnd</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    @*</div>*@
+
+    <partial name="_Detail" />
+</div>

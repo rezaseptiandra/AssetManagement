@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {            
+            $('#btnajx').click(function () {
+                var _Role =  { RoleID: $("#roleid").val() , Descriptions:$("#descriptions").val()};  
+                _Role = JSON.stringify(_Role);
+                debugger;
+                $.ajax({
+                    url: "SubmitAdd",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { obj: _Role },
+                    success: function (data) {
+                    },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form method="post" action="@Url.Action("SignUp", "Account")">
+    RoleID: <input type="text" id="roleid" /> <br />
+    Descriptions: <input type="email" id="descriptions" /> <br />
+    <input type="button" value="Submit Add" id="btnajx" class="btn btn-sm btn-primary btn-block" />
+   </form>

@@ -1,0 +1,211 @@
+﻿@Html.Script(
+    @<script>
+        var callBack;
+        function initDetail(action) { 
+            Action = action;
+            btShow("#divDetail");            
+            btShow("#btnDetailUpdate");            
+            btShow("#btnDetailDelete");    
+
+            if (action == "Detail") {
+                btHide("#btnSave");
+                btReadOnly("#deskripsi", true);
+                btDisabled("#periodeStart", true);
+                btDisabled("#periodeEnd", true);
+            }
+            else if (action == "New") {                
+                clearForm();
+                btHide("#btnDetailUpdate");
+                btHide("#btnDetailDelete");
+                btShow("#btnSave");                                
+                btReadOnly("#deskripsi", false);
+                btDisabled("#periodeStart", false);
+                btDisabled("#periodeEnd", false);
+            }
+            else if (action == "Update") {  
+                btHide("#btnDetailUpdate");
+                btHide("#btnDetailDelete");
+                btShow("#btnSave");                
+                btReadOnly("#deskripsi", false);
+                btDisabled("#periodeStart", false);
+                btDisabled("#periodeEnd", false);
+            }
+        }
+
+        function clearForm() {
+            $('#abpid').val('');
+            $('#deskripsi').val('');
+            $('#periodeStart').val(today);
+            $('#periodeEnd').val(today);
+        }
+
+        function populateData(data) {
+            $('#abpid').val(data.ABPID);
+            $('#deskripsi').val(data.Deskripsi);
+            $('#periodeStart').val(cDate(data.PeriodeStart));
+            $('#periodeEnd').val(cDate(data.PeriodeEnd));
+        }
+
+        function populateDataParam() {
+            return {
+                ABPID: $("#abpid").val(),
+                Deskripsi: $("#deskripsi").val(),
+                PeriodeStart: $("#periodeStart").val(),
+                PeriodeEnd: $("#periodeEnd").val()
+            }
+        }
+
+        function loadDetail(action, data, successFn, errorFn, callbackFunc) {
+            if (action == "New") {
+                initDetail(action);
+                successFn(action);
+                callBack = callbackFunc;
+            }
+            else {
+                $.ajax({
+                    url: "/ABP/Detail",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data:
+                    {
+                        Action:action,
+                        selectedData: data
+                    },
+                    success: function (data) {
+                        populateData(data);           
+                        initDetail(action);
+                        if (successFn != null) { successFn(action) };
+                        callBack = callbackFunc;
+                    },
+                    error: function () {
+                        errorFn();
+                    }
+                });
+            };
+        };
+
+        function backToCaller() {
+            clearForm();
+            btHide("#divDetail");
+            callBack(true);
+            Action = "New";
+        };
+
+        $('#btnDetailDelete').click(function () {
+            confirmationDialog("Delete Confirmation", "Are you sure you want to Delete this selected ABP?", function () {
+                $.ajax({
+                    url: "/ABP/SubmitDelete",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data:
+                    {
+                        selectedData: JSON.stringify([populateDataParam()])
+                    },
+                    success: function (data) {
+                        if (data.error_message == "") {
+                            backToCaller();
+                            successDialog("Success", "Delete Success")
+                        }
+                        else {
+                            errorDialog("Error", "Delete Error");
+                        }
+                    },
+                    error: function () {
+                        errorDialog("Error", "Delete Error");
+                    }
+                })
+            })
+        });
+
+        $('#btnDetailUpdate').click(function () {
+                loadDetail(
+                    "Update",
+                    JSON.stringify({ abpid: $("#abpid").val() }),
+                    null,
+                    function () {
+                        errorDialog("Error", "Populating Error");
+                    },
+                    callBack
+                );
+            });
+
+        $('#btnSave').click(function () {
+            var detailMessageSucces = Action + " Success";
+            var detailMessageError = Action + " Error";
+            var dataParam = JSON.stringify(populateDataParam());
+            $.ajax({
+                url: "/ABP/Save",
+                type: 'post',
+                datatype: 'application/json',
+                data:
+                {
+                    Action: Action,
+                    selectedData: dataParam
+                },
+                success: function (data) {
+                    if (data.errMessage == "") {
+                        loadDetail(
+                            "Detail",
+                            JSON.stringify({ abpid: data.abpid }),
+                            function () {
+                                successDialog("Success", detailMessageSucces);
+                            },
+                            function () {
+                                errorDialog("Error", "Populating Error");
+                            },
+                            callBack
+                        );
+                    }
+                    else {
+                        errorDialog("Error", detailMessageError);
+                    }
+                },
+                error: function () {
+                        errorDialog("Error", detailMessageError);
+                }
+            });
+        });
+
+        $('#dtForm').submit(function (e) {
+            e.preventDefault();
+        });
+
+        $('#btnDetailBack').click(function () {
+            backToCaller();
+        });
+    </script>
+)
+<div id="divDetail" class="d-none">
+    <button id="btnDetailBack" type="button" class="btn btn-primary btn-secondary pr-lg-4">Back</button>
+    <button id="btnDetailUpdate" type="button" class="btn btn-primary">Update</button>
+    <button id="btnDetailDelete" type="button" class="btn btn-primary btn-danger">Delete</button>
+    <div id="detailABP" class="col-md-6 order-md-1 ">
+        <h4 class="mb-3">Form Detail</h4>
+        <form id="dtForm">
+            <div class="mb-3">
+                <label for="lbl_abpid">ABPID @*<span class="text-muted">(Optional)</span>*@</label>
+                <input type="text" class="form-control" id="abpid" placeholder="[Auto]" readonly>
+            </div>
+
+            <div class="mb-3">
+                <label for="lbl_desc">Deskripsi</label>
+                <input type="text" class="form-control" id="deskripsi" placeholder="..." required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="lbl_periodeStart">Periode Mulai</label>
+                    <input type="date" class="form-control" id="periodeStart" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lbl_periodeEnd">Periode Berakhir</label>
+                    <input type="date" class="form-control" id="periodeEnd" required>
+                </div>
+            </div>
+            <p></p>
+            <div class="mb-3 mt-1">
+                <button id="btnSave" class="btn btn-primary btn-block " type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

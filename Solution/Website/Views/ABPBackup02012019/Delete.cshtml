@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#btnajx').click(function () {     
+                $.ajax({
+                    url: "SubmitDelete",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { id: $("#roleid").val()},
+                    success: function (data) {
+                    },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form method="post" action="@Url.Action("SignUp", "Account")">
+    RoleID: <input type="text" id="roleid" /> <br />
+
+    <input type="button" value="Submit Add" id="btnajx" class="btn btn-sm btn-primary btn-block" />
+   
+
+
+</form>

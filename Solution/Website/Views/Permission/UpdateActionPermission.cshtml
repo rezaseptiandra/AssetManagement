@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Update Action Permission";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#mainform").on("submit", function () {
+                var _obj = [{
+                    ControllerName: 'AccountController',
+                    ActionName: 'DeleteAccount',
+                    RequiredCreate: false,
+                    RequiredEdit: false,
+                    RequiredDelete: true,
+                    RequiredView: false},
+                 {
+                    ControllerName: 'AccountController',
+                    ActionName: 'Index',
+                    RequiredCreate: false,
+                    RequiredEdit: false,
+                    RequiredDelete: true,
+                    RequiredView: false},
+                 {
+                    ControllerName: 'AccountController',
+                    ActionName: 'SubmitDelete',
+                    RequiredCreate: false,
+                    RequiredEdit: false,
+                    RequiredDelete: false,
+                    RequiredView: false
+                }];
+                debugger;
+                _obj = JSON.stringify(_obj);
+                $.ajax({
+                    url: "SubmitUpdateActionPermission",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { obj: _obj },
+                    success: function (data) { },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form id="mainform">
+   <input type="submit" value="Submit" class="submit" /><br />
+</form>

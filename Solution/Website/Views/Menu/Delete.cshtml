@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Delete Menu";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#mainform").on("submit", function () {                
+                $.ajax({
+                    url: "SubmitDelete",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { id: $("#id").val() },
+                    success: function (data) { },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form id="mainform">
+    MenuID: <input type="text" id="id" /> <br />   
+    <input type="submit" value="Submit" class="submit" /><br />
+</form>

@@ -1,0 +1,51 @@
+﻿
+@*<p>Login</p>
+<form method="post" action="@Url.Action("Authenticate", "Account")">
+    Username: <input type="text" name="username" /> <br />
+    Password: <input type="password" name="password" /> <br />
+    <br />
+    <input type="submit" value="Submit" class="submit" />
+    <a href="@Url.Action("RequestResetPassword", "Account")"><p>Forgot Password</p></a>
+</form>*@
+<div class="d-none d-md-block d-lg-none">
+    Ulolka
+</div>
+<div class="row">
+    
+    <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Billing address</h4>
+        <form>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Parent Menu</label>
+                    <input type="text" class="form-control" id="firstName" name="parentid" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Menu Name</label>
+                    <input type="text" class="form-control" id="firstName" name="menuname" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Path</label>
+                    <input type="text" class="form-control" id="firstName" name="path" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </form>
+
+        </div>
+</div>
+    <!-- Content here -->

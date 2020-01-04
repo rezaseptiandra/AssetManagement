@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){
+            $('#btnajx').click(function () {
+                var _listRole =  [{ RoleID: 'ULI' }, { RoleID: 'AMR' }];  
+                _listRole = JSON.stringify(_listRole);
+                var datapar = $('form').serialize()+'&listRole='+_listRole;
+                debugger;
+                $.ajax({
+                    url: "SignUp",
+                    type: 'post',
+                    datatype: 'application/json',
+                    /*data:  $('form').serialize()+'&'+JSON.stringify({ listRole: listRole }),*/
+                    /*data: { listRole: _listRole },*/
+                    data: datapar,
+                    success: function (data) {
+                        debugger;
+                        /*$("#showResults").html(data)*/
+                    },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form method="post" action="@Url.Action("SignUp", "Account")">
+    Full Name: <input type="text" name="fullname" /> <br />
+    Email: <input type="email" name="email" /> <br />
+    Username: <input type="text" name="username" /> <br />
+    Password: <input type="password" name="password" /> <br />
+        Confirm Password: <input type="password" name="password2" /> <br />
+
+
+        @*Role1: <input type="text" name="role1" /> <br />
+            r2: <input type="text" name="role2" /> <br />*@
+        <input type="button" value="Test Ajax" id="btnajx" class="btn btn-sm btn-primary btn-block" />
+        <input type="submit" value="Submit" class="submit" /><br />
+
+
+</form>

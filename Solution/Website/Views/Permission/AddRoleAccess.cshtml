@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Add Permission";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){            
+            $("#formulol").on("submit", function () {
+                var _obj = {
+                    ControllerName: $("#controllername").val(),
+                    RoleID: $("#roleid").val(),
+                    AllowCreate: $("#create").is(":checked"),
+                    AllowEdit: $("#edit").is(":checked"),
+                    AllowDelete: $("#delete").is(":checked"),
+                    AllowView: $("#view").is(":checked")
+                };  
+                debugger;
+                _obj = JSON.stringify(_obj);
+                $.ajax({ 
+                    url: "SubmitAddRoleAccess",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { obj: _obj },
+                    success: function (data) {},
+                    error: function () {
+                        alert('Ajax error!');
+                    } 
+                });
+            return false;
+            });
+        });
+    </script>
+}
+<p>Register</p>
+<form id="formulol">
+    ControllerName: <input type="text" id="controllername" /> <br />
+    RoleID: <input type="text" id="roleid" /> <br />
+    Allow Create: <input type="checkbox" id="create" /> <br />
+    Allow Edit: <input type="checkbox" id="edit" /> <br />
+    Allow Delete: <input type="checkbox" id="delete" /> <br />
+    Allow View: <input type="checkbox" id="view" /> <br />
+    <input type="submit" value="Submit" class="submit" /><br />
+</form>

@@ -1,0 +1,52 @@
+﻿
+@*<p>Login</p>
+<form method="post" action="@Url.Action("Authenticate", "Account")">
+    Username: <input type="text" name="username" /> <br />
+    Password: <input type="password" name="password" /> <br />
+    <br />
+    <input type="submit" value="Submit" class="submit" />
+    <a href="@Url.Action("RequestResetPassword", "Account")"><p>Forgot Password</p></a>
+</form>*@
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){
+            $('#btnajx').click(function () {                
+                $.ajax({
+                     url: "Authenticate",
+                     type: 'post',
+                     datatype: 'application/json',
+                     data:  $('form').serialize(),
+                     success: function (data) {
+                       alert('Success')
+                         /*$("#showResults").html(data)*/
+                    }
+                    ,
+                     error: function () {
+                         alert('Ajax error!');
+                     }
+                 });
+            });
+        });
+    </script>
+}
+<div class="d-none d-md-block d-lg-none">
+    Ulolka
+</div>
+    <form class="form-signin" method="post" action="@Url.Action("Authenticate", "Account")">
+        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username or Email" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
+        <a href="@Url.Action("RequestResetPassword", "Account")"><p>Forgot Password</p></a>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <input type="button" value="Login" id="btnajx" class="btn btn-lg btn-primary btn-block"/>
+        <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+    </form>
+    <!-- Content here -->

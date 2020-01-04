@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<h1>@ViewData["Title"]</h1>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#example tfoot th').each( function () {
+                var title = $(this).text();
+                $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+            } );
+ 
+            // DataTable
+            // var table =
+            var table = $('#example').DataTable({
+                serverSide: true,
+                paging : true,
+                "ajax": {
+                    url: "@Url.Action("loaddata", "Role")",
+                    type: 'POST'
+                },
+                "columns": [
+                    { "data": "name" },
+                    { "data": "position" },
+                    { "data": "office" },
+                    { "data": "age" },
+                    { "data": "startDate", "type":"date" },
+                    { "data": "salary" },
+                    { "data": "active" }
+                ]
+            } );
+
+            
+            
+            // Apply the search
+            table.columns().every( function () {
+                var that = this;
+ 
+                $( 'input', this.footer() ).on( 'keyup change', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+            @*$('#example tfoot th').each( function () {
+                var title = $(this).text();
+                $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+            } );
+ 
+            // DataTable
+            $('#example').DataTable( {
+                "ajax": {
+                    url: "@Url.Action("loaddata", "Role")",
+                    type: 'POST'
+                },
+                "columns": [
+                    { "data": "name" },
+                    { "data": "position" },
+                    { "data": "office" },
+                    { "data": "age" },
+                    { "data": "startdate" },
+                    { "data": "salary" }
+                ]
+            } );
+
+            var table = $('#example').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    url: "@Url.Action("loaddata", "Role")",
+                    type: 'POST'
+                }
+               // ,
+               // "language": {
+               //     "search": "",
+               //     "searchPlaceholder": "Search..."
+               // },
+               //"columns": [
+               //     { "data": "Name", "name": "Name", "autoWidth": true },  
+               //     { "data": "Position", "name": "Position", "autoWidth": true },  
+               //     { "data": "Age", "name": "Age", "autoWidth": true },  
+               //     { "data": "Startdate", "name": "Startdate", "autoWidth": true },  
+               //     { "data": "Salary", "name": "Salary", "autoWidth": true },  
+               //     { "data": "Office", "name": "Office", "autoWidth": true }
+               //     //,  
+               //     //{  
+               //     //    "render": function (data, type, full, meta)  
+               //     //    { return '<a class="btn btn-info" href="/DemoGrid/Edit/' + full.CustomerID + '">Edit</a>'; }  
+               //     //},  
+               //     //{  
+               //     //    data: null, render: function (data, type, row)  
+               //     //    {  
+               //     //        return "<a href='#' class='btn btn-danger' onclick=DeleteData('" + row.CustomerID + "'); >Delete</a>";  
+               //     //    }  
+               //     //},  
+               // ]
+            });*@
+ 
+            // Apply the search
+            //table.columns().every( function () {
+            //    var that = this;
+ 
+            //    $( 'input', this.footer() ).on( 'keyup change', function () {
+            //        if ( that.search() !== this.value ) {
+            //            that
+            //                .search( this.value )
+            //                .draw();
+            //        }
+            //    } );
+            //} );
+
+
+            $('#btnajx').click(function () {
+                var _Role = { RoleID: $("#roleid").val(), Descriptions: $("#descriptions").val() };
+                _Role = JSON.stringify(_Role);
+                debugger;
+                $.ajax({
+                    url: "SubmitAdd",
+                    type: 'post',
+                    datatype: 'application/json',
+                    data: { obj: _Role },
+                    success: function (data) {
+                    },
+                    error: function () {
+                        alert('Ajax error!');
+                    }
+                });
+            });
+        });
+    </script>
+}
+<p>Main</p>
+<div class="table-responsive">
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Active</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+

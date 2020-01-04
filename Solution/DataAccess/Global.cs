@@ -52,7 +52,7 @@ namespace DataAccess
         {
             return new ObjectConnection
             {
-                ObjConn = new SqlConnection() { ConnectionString = "Data Source = REZA-PC;Initial Catalog=GMSDB; Integrated Security=True" },
+                ObjConn = new SqlConnection() { ConnectionString = "" },
                 Dialect = Dialect.SQLServer,
                 WithTrans = false
             };
@@ -61,21 +61,21 @@ namespace DataAccess
         {
             return new ObjectConnection
             {
-                ObjConn = new SqlConnection() { ConnectionString = "Data Source = 203.168.22.143;Initial Catalog=BMITEMP; Persist Security Info=True;User ID=bmierpisd;Password=ISDTeam18;Connection Timeout=30;min pool size=1;max pool size=350;Trusted_Connection=false" }
+                ObjConn = new SqlConnection() { ConnectionString = "" }
             };
         }
         internal static ObjectConnection BMI()
         {
             return new ObjectConnection
             {
-                ObjConn = new SqlConnection() { ConnectionString = "Data Source=ISD008A;Initial Catalog=REZADB; Integrated Security=True" }
+                ObjConn = new SqlConnection() { ConnectionString = "" }
             };
         }
         internal static IObjectConnection Connstring3()
         {
             return new ObjectConnection
             {
-                ObjConn = new SqlConnection() { ConnectionString = "Data Source=REZA-PC;Initial Catalog=REZADB; Integrated Security=True" }
+                ObjConn = new SqlConnection() { ConnectionString = "" }
             };
         }
     }

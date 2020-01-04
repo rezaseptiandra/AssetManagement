@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Website\\Website.csproj": {}
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Website\\Website.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {
-                "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj"
+              "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj",
         "projectName": "Logger",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -164,8 +164,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -200,14 +200,14 @@
         }
       }
     },
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Website\\Website.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Website\\Website.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Website\\Website.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Website\\Website.csproj",
         "projectName": "Website",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Website\\Website.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Website\\Website.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Website\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Website\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -228,11 +228,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj"
+              "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj"
               },
-              "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {
-                "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj"
+              "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj"
               }
             }
           }

@@ -40,22 +40,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE45CE59-8BC9-4BE8-9745-484EB2639666}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/septiandra-bmi
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Logger\\Logger.csproj
-		SccProjectName1 = Logger
-		SccLocalPath1 = Logger
-		SccProjectUniqueName2 = BusinessLogic\\BusinessLogic.csproj
-		SccProjectName2 = BusinessLogic
-		SccLocalPath2 = BusinessLogic
-		SccProjectUniqueName3 = DataAccess\\DataAccess.csproj
-		SccProjectName3 = DataAccess
-		SccLocalPath3 = DataAccess
-		SccProjectUniqueName4 = Website\\Website.csproj
-		SccProjectName4 = Website
-		SccLocalPath4 = Website
-	EndGlobalSection
 EndGlobal

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {}
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {
+    "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj",
+        "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj",
         "projectName": "Logger",
-        "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj",
+        "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\obj\\",
+        "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -100,8 +100,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\DataAccess\\DataAccess.csproj"
               }
             }
           }

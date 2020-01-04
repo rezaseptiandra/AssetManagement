@@ -2012,11 +2012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -2037,8 +2037,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj": {
-              "projectPath": "C:\\Users\\Reza\\source\\Workspaces\\MicroservicesBMI\\WebFramework\\WebFramework\\Logger\\Logger.csproj"
+            "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj": {
+              "projectPath": "C:\\Users\\Reza\\Documents\\GitHub\\EnterpirseFramework\\Solution\\Logger\\Logger.csproj"
             }
           }
         }
